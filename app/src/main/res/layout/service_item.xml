@@ -1,0 +1,137 @@
+<!-- res/layout/service_item.xml -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="20dp"
+    android:layout_marginVertical="10dp"
+    android:background="@drawable/simple_container"
+    android:elevation="6dp"
+    android:translationZ="4dp">
+
+    <ImageView
+        android:layout_marginTop="14dp"
+        android:id="@+id/serviceIcon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/services_transport_parking"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/serviceTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:text="Платные парковки"
+        android:textColor="@color/black"
+        android:fontFamily="@font/montserrat_semibold"
+        android:textSize="15sp"
+        app:layout_constraintTop_toTopOf="@id/serviceIcon"
+        app:layout_constraintStart_toEndOf="@id/serviceIcon"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/serviceDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="4dp"
+        android:text="Оплата парковок в RuParking"
+        android:textColor="@color/black"
+        android:fontFamily="@font/montserrat_regular"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@id/serviceIcon"
+        app:layout_constraintStart_toEndOf="@id/serviceIcon"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Контейнер для кнопок приложений -->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:visibility="gone"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="14dp"
+            android:id="@+id/app1"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@drawable/adds_button"
+            android:paddingHorizontal="14dp"
+            app:layout_constraintStart_toStartOf="@id/serviceIcon"
+            app:layout_constraintTop_toBottomOf="@id/serviceDescription">
+
+            <TextView
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:id="@+id/textapp1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="Подобрать"
+                android:textColor="#004676" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:visibility="gone"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="14dp"
+            android:id="@+id/app2"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:background="@drawable/adds_button"
+            android:paddingHorizontal="14dp"
+            android:layout_marginStart="10dp"
+            app:layout_constraintStart_toEndOf="@id/app1"
+            app:layout_constraintTop_toBottomOf="@id/serviceDescription">
+
+            <TextView
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:id="@+id/textapp2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="Подобрать"
+                android:textColor="#004676" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_marginBottom="10dp"
+        android:id="@+id/app3"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/adds_button"
+        android:paddingHorizontal="14dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/app1"
+        app:layout_constraintTop_toBottomOf="@id/app1">
+
+        <TextView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/textapp3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="Подобрать"
+            android:textColor="#004676" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="40dp"
+        app:layout_constraintTop_toBottomOf="@id/app1"
+        app:layout_constraintEnd_toEndOf="@id/app1"
+        android:layout_height="10dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

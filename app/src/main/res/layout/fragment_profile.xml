@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ProfileFragment">
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/profileContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:visibility="invisible">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="32dp">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@drawable/profile_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_marginTop="80dp"
+            android:id="@+id/profileImage"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:fontFamily="@font/montserrat_semibold"
+            android:textFontWeight="600"
+            android:textSize="24dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/profileImage"
+            android:id="@+id/nameOfUser"
+            android:textColor="@color/white"
+            android:text=""
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_marginTop="6dp"
+            android:text=""
+            android:textSize="18dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:textFontWeight="500"
+            android:textColor="@color/white"
+            android:id="@+id/rankOfUser"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nameOfUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/rankingBlok"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@drawable/simple_container"
+            android:elevation="8dp"
+            android:translationZ="4dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rankOfUser">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/left"
+                    android:layout_marginStart="10dp"
+                    android:layout_width="0dp"
+                    android:layout_height="88dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/right"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <TextView
+                        android:textSize="30dp"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:textColor="@color/black"
+                        android:id="@+id/levelNum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/textBottom"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+                    <TextView
+                        android:textSize="14dp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:id="@+id/textBottom"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Уровень"
+                        app:layout_constraintTop_toBottomOf="@id/levelNum"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/right"
+                    android:layout_marginEnd="10dp"
+                    android:layout_width="0dp"
+                    android:layout_height="88dp"
+                    app:layout_constraintStart_toEndOf="@id/left"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <TextView
+                        android:textSize="30dp"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:textColor="@color/black"
+                        android:id="@+id/pointsForNextLevel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/textBottom2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+                    <TextView
+                        android:textSize="14dp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:id="@+id/textBottom2"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Поинтов"
+                        app:layout_constraintTop_toBottomOf="@id/pointsForNextLevel"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="Награды"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="-18dp"
+            app:layout_constraintTop_toBottomOf="@id/rankingBlok"
+            app:layout_constraintStart_toStartOf="@id/rankingBlok"
+            android:id="@+id/achivementsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/achivementsBlock"
+            android:elevation="8dp"
+            android:translationZ="4dp"
+            android:layout_marginEnd="-18dp"
+            android:layout_marginStart="-18dp"
+            android:background="@drawable/simple_container"
+            app:layout_constraintEnd_toEndOf="@id/rankingBlok"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@id/rankingBlok"
+            android:layout_width="0dp"
+            app:layout_constraintTop_toBottomOf="@id/achivementsText"
+            android:layout_height="110dp">
+
+            <ImageView
+                android:id="@+id/imageViewAchivement"
+                android:src="@drawable/lock"
+                android:layout_marginStart="20dp"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/nameOfAchivement"
+                android:textSize="17dp"
+                android:layout_marginTop="-6dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:layout_marginStart="20dp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toEndOf="@id/imageViewAchivement"
+                app:layout_constraintTop_toTopOf="@id/imageViewAchivement"
+                android:text="Награды"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:fontFamily="@font/montserrat_regular"
+                android:layout_marginBottom="-6dp"
+                android:lineHeight="20dp"
+                android:text="Начните активничать\nчтобы получить награды"
+                app:layout_constraintStart_toEndOf="@id/imageViewAchivement"
+                android:layout_marginStart="20dp"
+                app:layout_constraintBottom_toBottomOf="@id/imageViewAchivement"
+                android:id="@+id/descriptionTextAchivement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="Район"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@id/achivementsBlock"
+            app:layout_constraintStart_toStartOf="@id/achivementsBlock"
+            android:id="@+id/districtLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/districtBlock"
+            android:elevation="8dp"
+            android:translationZ="4dp"
+            android:background="@drawable/simple_container"
+            app:layout_constraintEnd_toEndOf="@id/achivementsBlock"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@id/achivementsBlock"
+            android:layout_width="0dp"
+            app:layout_constraintTop_toBottomOf="@id/districtLabel"
+            android:layout_height="110dp">
+
+            <ImageView
+                android:id="@+id/imageViewDistrict"
+                android:src="@drawable/rayon"
+                android:layout_marginStart="20dp"
+                android:layout_width="130dp"
+                android:layout_height="72dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/nameOfDistrict"
+                android:textSize="17dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/blue_main"
+                app:layout_constraintStart_toEndOf="@id/imageViewDistrict"
+                app:layout_constraintTop_toTopOf="@id/imageViewDistrict"
+                android:text=""
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:fontFamily="@font/montserrat_regular"
+                android:lineHeight="20dp"
+                android:text="Район, что\nвыбираешь сердцем"
+                app:layout_constraintStart_toEndOf="@id/imageViewDistrict"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/imageViewDistrict"
+                android:id="@+id/descriptionTextDistrict"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <View
+            app:layout_constraintTop_toBottomOf="@id/districtBlock"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+    <ProgressBar
+        android:id="@+id/profileLoadingBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="@color/blue_main"/>
+    <!-- Затемнение фона -->
+    <View
+        android:id="@+id/dimBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:visibility="gone"/>
+
+    <!-- Всплывающий блок с инфой -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/districtPopup"
+        android:layout_width="340dp"
+        android:layout_height="400dp"
+        android:visibility="visible"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="12dp"
+        android:translationY="100dp"
+        android:alpha="0">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                 android:layout_marginTop="16dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:id="@+id/popupDistrictImage"
+                android:layout_width="280dp"
+                android:layout_height="160dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/kirovski" />
+
+            <TextView
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/popupDistrictImage"
+                android:id="@+id/popupDistrictName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Название района"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#212121"
+                android:layout_marginTop="12dp"
+                android:gravity="center"/>
+
+            <TextView
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/popupDistrictName"
+                android:id="@+id/popupDistrictDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Краткое описание района"
+                android:textSize="16sp"
+                android:textColor="#555555"
+                android:layout_marginTop="8dp"
+                android:gravity="center"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/close"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/blue_button_background"
+                app:layout_constraintTop_toBottomOf="@id/popupDistrictDescription"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/nunito"
+                    android:gravity="center"
+                    android:text="Закрыть"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    tools:ignore="SpUsage,TextSizeCheck" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</FrameLayout>

@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MapFragment">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.yandex.mapkit.mapview.MapView
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:id="@+id/mapview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <View
+                app:layout_constraintBottom_toTopOf="@id/cityBlock"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_marginStart="-20dp"
+                android:background="@drawable/simple_container"
+                android:elevation="8dp"
+                android:translationZ="4dp"
+                android:id="@+id/cityBlock"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp">
+                <ImageView
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="36dp"
+                    android:src="@drawable/logo"
+                    android:id="@+id/rostovLogo"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"/>
+                <TextView
+                    android:id="@+id/labelCityName"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:textSize="20dp"
+                    android:text="Ростов-на-Дону"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/rostovLogo"
+                    android:layout_marginStart="20dp"
+                    android:layout_width="wrap_content"
+                    android:paddingEnd="20dp"
+                    android:layout_height="wrap_content"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/additionalsBlock"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/simple_container_selected"
+                android:elevation="4dp"
+                android:translationZ="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/cityBlock" >
+                <ImageView
+                    android:id="@+id/additionalIcon"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:src="@drawable/services_home_buildings"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/additionalsBlock"
+                android:layout_marginTop="60dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:elevation="16dp"
+                android:translationZ="8dp"
+                android:background="@drawable/simple_container"
+                android:id="@+id/smartMapBlock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/labelSmartMap"
+                    android:textSize="22dp"
+                    android:text="Умная карта"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/montserrat_medium"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_marginTop="2dp"
+                    android:textSize="14dp"
+                    android:text="(только самое нужное)"
+                    android:fontFamily="@font/montserrat_medium"
+                    app:layout_constraintTop_toBottomOf="@id/labelSmartMap"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:id="@+id/additionalTextSmartMap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_marginTop="22dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/additionalTextSmartMap"
+                    android:id="@+id/const1"
+                    android:layout_width="match_parent"
+                    android:layout_height="106dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:alpha="0"
+                        android:layout_marginTop="4dp"
+                        android:id="@+id/transportBlock"
+                        android:layout_width="0dp"
+                        android:layout_height="86dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginEnd="15dp"
+                        android:background="@drawable/simple_container"
+                        android:elevation="4dp"
+                        android:translationZ="4dp"
+                        app:layout_constraintEnd_toStartOf="@id/restaurantBlock"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+                        <ImageView
+                            android:layout_marginTop="12dp"
+                            android:id="@+id/itemImage1"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:src="@drawable/category_bus"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:id="@+id/itemTitle1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="8dp"
+                            android:text="Транспорт"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/itemImage1" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:alpha="0"
+                        android:layout_marginTop="4dp"
+                        android:id="@+id/restaurantBlock"
+                        android:layout_width="0dp"
+                        android:layout_height="86dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="24dp"
+                        android:background="@drawable/simple_container"
+                        android:elevation="4dp"
+                        android:translationZ="4dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/transportBlock"
+                        app:layout_constraintTop_toTopOf="parent">
+                        <ImageView
+                            android:layout_marginTop="12dp"
+                            android:id="@+id/itemImage2"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:src="@drawable/services_food_3"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:id="@+id/itemTitle2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="8dp"
+                            android:text="Рестораны"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/itemImage2" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_marginTop="6dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/const1"
+                    android:id="@+id/const2"
+                    android:layout_width="match_parent"
+                    android:layout_height="106dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:alpha="0"
+                        android:layout_marginTop="4dp"
+                        android:id="@+id/fuelBlock"
+                        android:layout_width="0dp"
+                        android:layout_height="86dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginEnd="15dp"
+                        android:background="@drawable/simple_container"
+                        android:elevation="4dp"
+                        android:translationZ="4dp"
+                        app:layout_constraintEnd_toStartOf="@id/parkBlock"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+                        <ImageView
+                            android:layout_marginTop="12dp"
+                            android:id="@+id/itemImage3"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:src="@drawable/services_auto_2"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:id="@+id/itemTitle3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="8dp"
+                            android:text="Заправки"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/itemImage3" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:alpha="0"
+                        android:layout_marginTop="4dp"
+                        android:id="@+id/parkBlock"
+                        android:layout_width="0dp"
+                        android:layout_height="86dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="24dp"
+                        android:background="@drawable/simple_container"
+                        android:elevation="4dp"
+                        android:translationZ="4dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/fuelBlock"
+                        app:layout_constraintTop_toTopOf="parent">
+                        <ImageView
+                            android:layout_marginTop="12dp"
+                            android:id="@+id/itemImage4"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:src="@drawable/services_dosug_parks"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:id="@+id/itemTitle4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="8dp"
+                            android:text="Парки"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/itemImage4" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_marginTop="6dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/const2"
+                    android:id="@+id/const3"
+                    android:layout_width="match_parent"
+                    android:layout_height="106dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:alpha="0"
+                        android:layout_marginTop="4dp"
+                        android:id="@+id/goodsBlock"
+                        android:layout_width="0dp"
+                        android:layout_height="86dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginEnd="15dp"
+                        android:background="@drawable/simple_container"
+                        android:elevation="4dp"
+                        android:translationZ="4dp"
+                        app:layout_constraintEnd_toStartOf="@id/medicineBlock"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+                        <ImageView
+                            android:layout_marginTop="12dp"
+                            android:id="@+id/itemImage5"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:src="@drawable/services_dosug_cinema"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:id="@+id/itemTitle5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="8dp"
+                            android:text="Развлечения"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/itemImage5" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:alpha="0"
+                        android:layout_marginTop="4dp"
+                        android:id="@+id/medicineBlock"
+                        android:layout_width="0dp"
+                        android:layout_height="86dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="24dp"
+                        android:background="@drawable/simple_container"
+                        android:elevation="4dp"
+                        android:translationZ="4dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/goodsBlock"
+                        app:layout_constraintTop_toTopOf="parent">
+                        <ImageView
+                            android:layout_marginTop="12dp"
+                            android:id="@+id/itemImage6"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:src="@drawable/services_medicine_hospital"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:id="@+id/itemTitle6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="8dp"
+                            android:text="Медицина"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/itemImage6" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            <View
+                app:layout_constraintTop_toBottomOf="@id/const3"
+                android:layout_width="match_parent"
+                android:layout_height="16dp"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Мой Ростов</string>
+
+    <string name="welcomeText">Добро пожаловать в РНД</string>
+    <string name="welcomeDeskription">Приложение для города\n\nУзнайте, как РНД делает повседневную жизнь проще — покажем главные возможности!</string>
+    <string name="start">Начнем</string>
+
+    <string name="next">Далее</string>
+    <string name="finish">Завершить</string>
+
+    <string name="posText1">Получай актуальные события и афишу — не пропускай то, что происходит рядом</string>
+    <string name="posText2">Смотри фото с места событий на интерактивной карте и делись своими впечатлениями</string>
+    <string name="posText3">Еда, доставка, запись к врачу и даже помощь по дому — в одном месте</string>
+    <string name="posText4">Новости Ростова, объявления от жителей и важное рядом с тобой</string>
+    <string name="posText5">Получай баллы за активность и обменивай их на призы — стань героем своего района</string>
+    <string name="noNetText">У вас отсутсвует подключение к интернету, попробуйте еще раз</string>
+    <string name="repeat">Повторить</string>
+
+    <string name="byCode">С помощью кода</string>
+    <string name="auth">Авторизоваться</string>
+    <string name="choose">Выбрать район</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

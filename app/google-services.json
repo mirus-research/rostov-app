@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1088777619135",
+    "project_id": "rostov-on-don-5b83b",
+    "storage_bucket": "rostov-on-don-5b83b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1088777619135:android:dd41e2fc5430cb332aa80a",
+        "android_client_info": {
+          "package_name": "ru.mirus.rostovondon"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBW_eJ1gUIjRp84nqDKA-JnQtR-JHF9z3U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
