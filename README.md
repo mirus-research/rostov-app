@@ -8,7 +8,7 @@ into a single, easy-to-use mobile experience.
 ## Features
 
 - **User profile with rating and achievements**  
-  Earn points for activity, level up, unlock titles and rewards, and stay visible within the city community.
+  Earn points for activity, level up, unlock titles, and stay visible within the city community.
 
 - **Intelligent city services**  
   From ordering a taxi or calling a specialist to planning walks and routes around the city.
