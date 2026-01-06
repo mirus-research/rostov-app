@@ -1,4 +1,4 @@
-# My Rostov
+# My Rostov (Мой Ростов)
 
 **My Rostov** is a smart city companion app designed for residents and visitors of Rostov-on-Don.
 
